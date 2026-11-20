@@ -1,8 +1,8 @@
 ---
 name: skill-authoring
-description: Update an existing Claude Code skill, write a new one, or audit one against a fixed structural and prose standard. Use when the user says "update the X skill", "add X to the Y skill", "change how the X skill works", "write a skill", "create a skill for X", "make a skill", "turn this into a skill", "audit this skill", "review this skill", or is editing a SKILL.md. Applies a Work/Emit/Halt stage spine, emit templates instead of persuasion, literal halt strings, lighter-run flags decided with the user, progressive disclosure into references, and the mechanism-stays/motivation-moves prose rule.
+description: Update an existing Claude Code skill, write a new one, or audit one against a fixed structural and prose standard. Use when the user says "update the X skill", "add X to the Y skill", "change how the X skill works", "write a skill", "create a skill for X", "make a skill", "turn this into a skill", "audit this skill", "review this skill", or is editing a SKILL.md.
 argument-hint: "[<skill name or path>] [--update] [--new] [--audit]"
-allowed-tools: Read, Write, Edit, Grep, Glob, Bash(ls:*), Bash(wc:*), Bash(git:*)
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(ls:*), Bash(wc:*)
 ---
 
 # Skill Authoring
