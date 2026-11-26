@@ -4,6 +4,8 @@ A Claude Code skill for writing, updating and auditing other Claude Code skills 
 
 A skill instructs an operator; it does not convince them. It carries what to do, what not to do, and what to emit. Anything that argues a rule is right goes in a rationale file that never loads at runtime. Each stage is built from Work, Emit and Halt: an imperative action, a literal output template with named fields, and the exact text to emit on failure.
 
+Review gates render as plain markdown, not code blocks: a heading that names the stage, each field as a bold label, the fields that need your decision first, and code formatting only for things you'd copy and run. Skills it writes follow the same format.
+
 ## Modes
 
 | Mode | Invoke | What it does |
