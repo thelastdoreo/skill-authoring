@@ -160,7 +160,7 @@ Add `Do not fix and continue` where the lenient path is tempting.
 **Emit** (required — principle #3):
 
 ```markdown
-## Stage {N}: verify — {skill name} → {path}
+## Stage 6: verify — {skill name} → {path}
 
 **Failed:** {any check above that did not pass, or: none}
 
