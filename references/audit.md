@@ -47,28 +47,22 @@ Differing wording between files is not a finding. Raise it only where two words 
 
 Emit the block below.
 
-```
-AUDIT · {skill name}
+```markdown
+## Stage 4 review: audit — {skill name}
 
-Defects   {none}
-  1. {file}:{line} — {what is wrong}
-     → {proposed change}
-  2. {file}:{line} — {what is wrong}
-     → {proposed change}
+**Defects:** {none, or numbered:}
+1. {file}:{line} — {what is wrong} → {proposed change}
 
-Prose   {none}
-  3. {file}:{line} "{quoted}"
-     → rewrite: "{the constraint stated as an action}"
-  4. {file}:{line} "{quoted}"
-     → extract: "{the rule kept}"
-  5. {file}:{line} "{quoted}"
-     → cut
+**Prose:** {none, or numbered, continuing the numbers:}
+2. {file}:{line} "{quoted}" → rewrite: "{the constraint stated as an action}"
+3. {file}:{line} "{quoted}" → extract: "{the rule kept}"
+4. {file}:{line} "{quoted}" → cut
 
-Questions   {none}
-  Q1. {the decision}
-     - I would {recommendation}
+**Questions:** {none, or:}
+- Q1. {the decision} — I would {recommendation}
 
-Recommended: {numbers}
+**Recommended:** {numbers}
+
 Reply with numbers, "defects", or "all".
 ```
 

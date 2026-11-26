@@ -39,19 +39,26 @@ Workflow skills that never stop and never refuse do not need to be skills — th
 
 **Emit** (required — principle #3):
 
-```
-REVIEW GATE · SHAPE — {skill name}
+```markdown
+## Stage 2 review: shape — {skill name}
 
-Kind:    pipeline | mode-router
-Stages:  {numbered; actions numbered within each}
-Reviews: {which stages are review gates, and the decision at each}
-Flags:   {flag — which stages it skips, or: none}
-Default: {what runs with no flag}
-Lighter run?: {stages a faster run might skip, and when it would be used — or: none apparent}
-Refuses: {halt conditions}
-Files:   SKILL.md + {references to be written}
+**Lighter run?:** {stages a faster run might skip, and when it would be used — or: none apparent}
 
-→ Confirm the shape, or name what is wrong with it.
+**Kind:** pipeline | mode-router
+
+**Stages:** {numbered; actions numbered within each}
+
+**Reviews:** {which stages are review gates, and the decision at each}
+
+**Flags:** {flag — which stages it skips, or: none}
+
+**Default:** {what runs with no flag}
+
+**Refuses:** {halt conditions}
+
+**Files:** SKILL.md + {references to be written}
+
+Confirm the shape, or name what is wrong with it.
 ```
 
 **Stop**: advance only on the user's explicit affirmative.
@@ -99,15 +106,19 @@ Not every stage has all three. Every stage has Work.
 
 Give the literal template with named placeholder fields:
 
+```markdown
+## Stage {N} review: {name} — {subject}
+
+**{Field that needs the user's decision}:** {what goes here}
+
+**{Field}:** {what goes here, or: none}
+
+{what the user is being asked to do}
 ```
-REVIEW GATE · {NAME} — {subject}
 
-{Field}:  {what goes here}
-{Field}:  {what goes here, or: none}
-
-→ {what the user is being asked to do}
-```
-
+- **Render as plain markdown, never as a code block at emit time**: a `##` heading that names the stage, each field as a **bold label** followed by its value as prose or bullets, sub-items as bullets. Keep the template itself in a `markdown` fence so it reads as a template, not as structure of the reference file.
+- **Lead with what needs the user's decision**, then the rest in the template's order.
+- **Write names and paths as plain text** in the emitted block; use code formatting only for something the user would copy and run.
 - **The template is the whole contract**: anything absent from it is absent from the output — numbering, section labels, ordering, reply instructions. Do NOT rely on supplying structure at emit time.
 - **Name fields for what you want back**: `consumers: N (list them)` says produce the enumeration. `looks good` says nothing.
 - **Every field is filled or written `none`.**
@@ -148,13 +159,16 @@ Add `Do not fix and continue` where the lenient path is tempting.
 
 **Emit** (required — principle #3):
 
-```
-VERIFY · {skill name} → {path}
+```markdown
+## Stage {N}: verify — {skill name} → {path}
 
-Deviations: {where the build differs from the shape agreed at Stage 2, or: none}
-Assumed:    {taken on faith rather than checked, or: none}
-Failed:     {any check above that did not pass, or: none}
-Open:       {untested or deferred, or: none}
+**Failed:** {any check above that did not pass, or: none}
+
+**Deviations:** {where the build differs from the shape agreed at Stage 2, or: none}
+
+**Assumed:** {taken on faith rather than checked, or: none}
+
+**Open:** {untested or deferred, or: none}
 
 Reply to change any line.
 ```

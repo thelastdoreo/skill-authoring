@@ -13,14 +13,16 @@ An update is scoped to what the user asked for. Do not review, restructure, or t
 3. **Route** to `references/structure.md` when nothing matches.
 4. **Confirm** before advancing, unless `--update` was given and the target matched by name or path:
 
-```
-UPDATE · confirm
+```markdown
+## Stage 1: confirm the target — {skill name}
 
-Target:     {skill name} — {path}
-Matched by: {name | path | description}
-Change:     {what the user asked for, in one line}
+**Change:** {what the user asked for, in one line}
 
-→ Confirm, or reply "new" to create a skill instead, or "audit" to review this one.
+**Target:** {skill name} — {path}
+
+**Matched by:** {name | path | description}
+
+Confirm, or reply "new" to create a skill instead, or "audit" to review this one.
 ```
 
 **Stop**: advance only on an explicit affirmative.
@@ -53,18 +55,24 @@ Record what the skill does, not what it should do. A structural difference from 
 3. **Write** the new prose per this skill's `references/prose.md` — imperative, second person, no metaphor. Move displaced motivation to the target skill's `references/rationale.md` only where the skill already has one.
 4. **Emit**:
 
-```
-REVIEW GATE · UPDATE — {skill name}
+```markdown
+## Stage 3 review: update — {skill name}
 
-Change:    {what the user asked for, in one line}
-Edits:     {file}:{lines} — {what changes}
-           {file}:{lines} — {what changes}
-Ripple:    {flag annotations, map entries, cross-references that must follow, or: none}
-New files: {path — why the change does not fit an existing file, or: none}
-Rationale: {motivation moved to rationale.md, or: none}
-Noticed:   {unrelated problems seen but not touched, or: none}
+**Change:** {what the user asked for, in one line}
 
-→ Confirm, or name what is wrong.
+**Edits:**
+- {file}:{lines} — {what changes}
+- {file}:{lines} — {what changes}
+
+**Ripple:** {flag annotations, map entries, cross-references that must follow, or: none}
+
+**New files:** {path — why the change does not fit an existing file, or: none}
+
+**Rationale:** {motivation moved to rationale.md, or: none}
+
+**Noticed:** {unrelated problems seen but not touched, or: none}
+
+Confirm, or name what is wrong.
 ```
 
 **Stop**: do not edit before an explicit affirmative.
@@ -102,14 +110,18 @@ Check what changed, and nothing else:
 
 **Emit**:
 
-```
-UPDATE · {skill name}
+```markdown
+## Stage 5: update applied — {skill name}
 
-Applied:  {numbered edits}
-Ripple:   {what followed, or: none}
-Checked:  {which checks above ran}
-Failed:   {any check that did not pass, or: none}
-Noticed:  {carried from Stage 3, still untouched, or: none}
+**Applied:** {numbered edits}
+
+**Failed:** {any check that did not pass, or: none}
+
+**Ripple:** {what followed, or: none}
+
+**Checked:** {which checks above ran}
+
+**Noticed:** {carried from Stage 3, still untouched, or: none}
 
 Reply to change any line.
 ```
